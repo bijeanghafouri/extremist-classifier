@@ -1,8 +1,26 @@
-# extremist-classifier
-This repository contains the code and resources for a BERT-based classifier for Twitter/X users. This classifier allows to segment users as extremists or moderates.
+# Political ideology Classification
+This repository contains the code and resources for an academic project that aims to classify Twitter users based on their political ideology, distinguishing between moderates and extremists among left-leaning and right-leaning users.
 
 ## Project Overview
-The model is trained on a dataset related to political leaning and utilizes the RoBERTa model for sequence classification.
+The project utilizes two main datasets: (not available on this repository for privacy concerns)
+1. Tweets of users
+2. Ideal point estimates (ideological scores) from the Barbera (2015).
+The goal is to find the ideal point estimates on a 2-dimensional scale that best distinguishes between moderates and extremists within each political leaning (left and right). The classification is based on signals produced by the tweets of each user, which are used to identify differences between moderates and extremists.
+
+## Methodology
+1. Data Preprocessing:
+   - The tweets and ideal point estimates datasets are preprocessed and combined to create a unified dataset for analysis.
+
+2. Feature Extraction:
+   - Relevant features are extracted from the tweets of each user to capture signals that may indicate their political ideology and extremity.
+
+3. Model Training:
+   - The project utilizes the RoBERTa model for sequence classification to train a classifier on the preprocessed dataset.
+   - The model is trained to distinguish between moderates and extremists within each political leaning (left and right).
+
+4. Evaluation:
+   - The trained model is evaluated on a test dataset to assess its performance in classifying users based on their political ideology and extremity.
+   - Metrics such as precision, recall, F1-score, and accuracy are used to measure the model's performance.
 
 ## Scripts
 The repository includes the following Python scripts:
@@ -15,16 +33,6 @@ The repository includes the following Python scripts:
 - `Dataset.py`: Defines the `CustomDataset` class for loading and preprocessing the dataset.
 - `logger_config.py`: Configuration file for setting up the logger.
 - `Predictor.py`: Defines the `Predictor` class for making predictions using the trained model.
-
-## Dataset
-The datasets used for training and evaluation is not included in this repository as they are too large to contain. Moreover, they include personal information; social media data cannot be publicly posted unless given the ability to hydrate.  Please ensure that you have the necessary dataset files before running the scripts.
-
-## Requirements
-To run the scripts, make sure you have the following dependencies installed:
-1. Clone the repository: `git clone <repository_url>`
-2. Install the required dependencies.
-3. Prepare your dataset and ensure it is accessible to the scripts.
-4. Run the `main.py` script to start the training and evaluation process.
 
 ## Results
 The classification results, including precision, recall, F1-score, and accuracy, will be saved in the specified output directory.
