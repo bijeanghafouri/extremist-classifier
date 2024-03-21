@@ -35,7 +35,7 @@ The repository includes the following Python scripts:
 - `Predictor.py`: Defines the `Predictor` class for making predictions using the trained model.
 
 ## Results
-The classification results, including precision, recall, F1-score, and accuracy, will be saved in the specified output directory.
+The classification results, including precision, recall, F1-score, and accuracy, will be saved in the results folder. This folder contains the results for three ideological thresholds among left-leaning and right-leaning users: 0.3, 0.5, and a 0.9 threshold. Such thresholds identify the proportion of users on either side of the extremist/moderate divide.
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
